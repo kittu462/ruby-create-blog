@@ -1,7 +1,2 @@
-<div>
-<h2><%= link_to post.title, :action => 'show', :id => post %></h2>
-<p><%= post.body %></p>
-<p><small>
-<%= post.created_at.to_s %>
-</small></p> 
-</div>
+ <h2><%= link_to_unless_current post.title, post %></h2>
+ <%= simple_format post.body %>
