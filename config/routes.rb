@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   devise_for :admins
   #resources :comments
   resources :posts do
-    resources :comments, :only => [:create]
+    resources :discussions
   end
+
+  root "posts#index"
 
   
   # The priority is based upon order of creation: first created -> highest priority.
