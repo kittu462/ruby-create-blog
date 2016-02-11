@@ -9,10 +9,14 @@
   <dt><strong><%= model_class.human_attribute_name(:body) %>:</strong></dt>
   <dd><%= @post.body %></dd>
 </dl>
+
 <h2>Comments</h2>
 <%= render @post.discussions %>
+
 <h2>Add a comment:</h2>
 <%= render 'discussions/form' %>
+
+
  
 
 <%= link_to t('.back', :default => t("helpers.links.back")),

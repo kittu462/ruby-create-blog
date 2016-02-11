@@ -1,14 +1,28 @@
-<p>
-  <strong>Commenter:</strong>
-  <%= discussion.commenter %>
-</p>
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Commenter</th>
+      <th>Comment</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+	
+<tbody>
+	<tr>
+  <td><%= discussion.commenter %></td>
+
  
-<p>
-  <strong>Comment:</strong>
-  <%= discussion.body %>
-</p>
-<p>
-  <%= link_to 'Destroy Discussion', [discussion.post, discussion],
+<td><%= discussion.body %></td>
+
+<td class = 'btn btn-xs btn-danger'>
+  <%= link_to 'Delete Discussion', [discussion.post, discussion],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
-</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+
